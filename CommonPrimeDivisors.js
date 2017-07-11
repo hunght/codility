@@ -15,8 +15,11 @@ function solution(N, M) {
 }
 
 function isSameSet(a, b) {
-   let gcd_value = gcd(a,b)
-  return removeCommonPrimeDivisors(a,gcd_value) == 1 && removeCommonPrimeDivisors(b,gcd_value) == 1;
+  let gcd_value = gcd(a, b);
+  return (
+    removeCommonPrimeDivisors(a, gcd_value) == 1 &&
+    removeCommonPrimeDivisors(b, gcd_value) == 1
+  );
 }
 
 function gcd(a, b) {
@@ -28,13 +31,13 @@ function gcd(a, b) {
 
 function removeCommonPrimeDivisors(x, y) {
   while (x != 1) {
-      let gcd_value = gcd(x,y)
-      if (gcd_value == 1){
-          break
-      }
-      x/=gcd_value
+    let gcd_value = gcd(x, y);
+    if (gcd_value == 1) {
+      break;
+    }
+    x /= gcd_value;
   }
-  return x
+  return x;
 }
 
 function lcm(a, b) {
