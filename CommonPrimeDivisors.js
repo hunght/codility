@@ -4,13 +4,13 @@
 function solution(N, M) {
   // write your code in JavaScript (Node.js 6.4.0)
   let count = 0;
-  for (let index = 0; index < N.length; index++) {
-    let a = N[index];
-    let b = M[index];
+  N.forEach(function(e, i) {
+    let a = e;
+    let b = M[i];
     if (isSameSet(a, b)) {
       count++;
     }
-  }
+  });
   return count;
 }
 
